@@ -1,0 +1,19 @@
+body {
+    background-image: url("../images/background.jpg");
+    background-repeat: no-repeat;
+    background-color: black;
+    background-position: center;
+}
+
+#techPlace{
+    width: 40%;
+    margin: auto;
+    text-align: center;
+    border: 1px solid black;
+    color: brown;
+    background-color: RGBA(255,255,255,1) ;
+}
+div {
+    border-bottom: 1px solid black;
+}
+

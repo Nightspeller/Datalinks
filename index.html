@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <link type="text/css" rel="stylesheet" href="css/style.css" />
+    <script type="text/javascript" src="js/jquery-1.9.1.js"></script>
+    <script type="text/javascript" src="js/underscore.js"></script>
+    <script type="text/javascript" src="js/backbone.js"></script>
+    <script type="text/javascript" src="js/handlebars.js"></script>
+    <script type="text/javascript" src="js/require.js"></script>
+    <script type="text/javascript" src="js/index.js"></script>
+</head>
+<body>
+
+    <div id="techPlace"></div>
+
+
+
+    <script id="techTmpl" type="text/x-handlebars-template">
+        <div class="name">{{name}}</div>
+        <div class="image"><img src="images/{{image}}"></div>
+        <div class="shortDescription">{{shortDescription}}</div>
+        <div class="fullDescription">{{fullDescription}}</div>
+        <div class="quote">{{{quote}}}</div>
+        <div class="requires">Requires:<br/>{{requires}}</div>
+        <div class="leadsTo">Leads to:<br/>{{leadsTo}}</div>
+        <div class="chassis">{{chassis}}</div>
+        <div class="weapon">{{weapon}}</div>
+        <div class="armor">{{armor}}</div>
+        <div class="reactor">{{reactor}}</div>
+        <div class="ability">{{ability}}</div>
+        <div class="terraform">{{terraform}}</div>
+        <div class="nasecretProjectme">{{secretProject}}</div>
+        <div class="facility">{{facility}}</div>
+        <div class="socialChoice">{{socialChoice}}</div>
+        <div class="specialist">{{specialist}}</div>
+        <div class="councilProposal">{{councilProposal}}</div>
+        <div class="bonus">{{bonus}}</div>
+    </script>
+</body>
+</html>
