@@ -48,15 +48,31 @@ var technologyView = Backbone.View.extend({
     }
 });
 
-$(document).ready(function() {
-    $.getJSON("js/data.json", function(json) {
-        console.log(json); // this will show the info it in firebug console
-        var data = json.data;
-        var technologies = [];
-        _.each(data, function(techData,index){
-            technologies[index] = new technologyModel(techData);
+var Workspace = Backbone.Router.extend({
+
+    routes: {
+        "":                 "init",
+        "tech/:number":        "tech"
+    },
+
+    init: function() {
+    },
+
+    tech: function(number) {
+        $.getJSON("js/data.json", function(json) {
+            console.log(json); // this will show the info it in firebug console
+            var data = json.data;
+            var technologies = [];
+            _.each(data, function(techData,index){
+                technologies[index] = new technologyModel(techData);
+            });
+            var techView = new technologyView({el: $('#techPlace') ,model: technologies[number]});
+            techView.render();
         });
-        var techView = new technologyView({el: $('#techPlace') ,model: technologies[0]});
-        techView.render();
-    });
+    }
+});
+
+$(document).ready(function() {
+    var app_router = new Workspace;
+    Backbone.history.start();
 });
