@@ -51,8 +51,8 @@ var technologyView = Backbone.View.extend({
 var Workspace = Backbone.Router.extend({
 
     routes: {
-        "":                 "init",
-        "tech/:number":        "tech"
+        ""              :        "init",
+        "tech/:number"  :        "tech"
     },
 
     init: function() {
